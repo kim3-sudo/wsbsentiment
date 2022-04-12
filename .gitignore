@@ -1,5 +1,7 @@
 # Environment files (but not including the demo file)
 .env
+.ini
+*.ini
 
 # Token files
 token
