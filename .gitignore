@@ -1,0 +1,5 @@
+# Environment files (but not including the demo file)
+.env
+
+# Token files
+token
