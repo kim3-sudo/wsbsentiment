@@ -16,7 +16,7 @@ def action():
     if action == 'tendies':
         return flask.jsonify({"result": 'this free tendies module isn\'t ready yet.'})
     elif action == 'advice':
-        return flask.jsonify({"result": 'this free advice module isn\'t ready yet.'})
+        return flask.jsonify({"result": wsb.wsbgetadvice()})
     elif action == 'decode':
         outstr = """
         <div class="wsblingowrapper">
