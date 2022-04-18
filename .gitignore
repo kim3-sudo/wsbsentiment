@@ -3,5 +3,8 @@
 .ini
 *.ini
 
-# Token files
+# Private token files
 token
+
+# hdf5 weights (these will differ between users)
+*.hdf5
