@@ -1,0 +1,260 @@
+/*
+  ████████╗██╗  ██╗███████╗███╗   ███╗███████╗ ██████╗
+  ╚══██╔══╝██║  ██║██╔════╝████╗ ████║██╔════╝██╔════╝  I'm not a pro. There might be problems with my
+     ██║   ███████║█████╗  ██╔████╔██║█████╗  ██║       stylesheet. If there's anything, feel free to
+     ██║   ██╔══██║██╔══╝  ██║╚██╔╝██║██╔══╝  ██║       contact me. Sorry for any inconvenience. It's
+     ██║   ██║  ██║███████╗██║ ╚═╝ ██║███████╗╚██████╗  nothing but if you wanna donate, Thanks so much!
+     ╚═╝   ╚═╝  ╚═╝╚══════╝╚═╝     ╚═╝╚══════╝ ╚═════╝
+         by u/JungleLiquor. paypal.me/jungleliquor    */
+
+
+
+
+
+
+
+
+
+  /* This text box */
+  .sheets .col textarea { background-image: linear-gradient(#050E10, #100605); color: white; }
+
+  /* BODY */
+  body { margin: 5px; }
+
+/*██╗  ██╗███████╗ █████╗ ██████╗ ███████╗██████╗ 
+  ██║  ██║██╔════╝██╔══██╗██╔══██╗██╔════╝██╔══██╗
+  ███████║█████╗  ███████║██║  ██║█████╗  ██████╔╝
+  ██╔══██║██╔══╝  ██╔══██║██║  ██║██╔══╝  ██╔══██╗
+  ██║  ██║███████╗██║  ██║██████╔╝███████╗██║  ██║
+  ╚═╝  ╚═╝╚══════╝╚═╝  ╚═╝╚═════╝ ╚══════╝╚═╝  ╚═╝*/
+
+  /* HEADER */
+  #header {
+    margin-top: 27px;
+    border: 1px solid white;
+    height: 100px;
+    background-image: linear-gradient(#1D4350, #A43931);
+    border-radius: 4px; }
+
+      /* HEADER (TOP) */
+      #sr-header-area { margin-top: -23px; background: none; border: none; }
+
+          /* HEADER (TOP) > GET NEW REDDIT */
+          #sr-header-area .redesign-beta-optin { width: 0; background: transparent; }
+          #sr-header-area .redesign-beta-optin:before { background: #FF4500; border-radius: 4px; }
+
+          /* HEADER (TOP) > MY SUBREDDITS */
+          .dropdown.srdrop .selected {
+            margin-right: 5px;
+            padding: 0 10px;
+            background: #EEEEEE;
+            border-radius: 4px;
+            margin-left: 0px;
+            transition: background-color 0.3s ease; }
+          .dropdown.srdrop .selected:hover { background: #DDDDDD; }
+
+          /* HEADER (TOP) > EDIT */
+          #sr-more-link { background: white; padding-left: 10px; }
+
+      /* HEADER (BOTTOM-LEFT) */
+      #header-bottom-left { bottom: -25px; position: absolute; width: 100%; }
+
+          /* HEADER (BOTTOM-LEFT) > REDDIT LOGO */
+          #header-img.default-header, #header-img { display: none; }
+
+          /* HEADER (BOTTOM-LEFT) > PAGENAME */
+          .pagename { position: absolute; top: -45px; left: 10px; font-size: 0px; }
+          .pagename a {
+            font-size: 30px;
+            color: #fff;
+            font-family: "Arial",sans-serif;
+            letter-spacing: -2px;
+            font-variant: none;
+            font-weight: normal;
+            text-shadow: 0px 0px 15px rgba(0, 0, 0, 0.25); }
+          .pagename a:hover { text-decoration: none; opacity: 0.8; transition: .3s; }
+
+          /* HEADER (BOTTOM-LEFT) > MENU */
+          .tabmenu li a { background: transparent; }
+          .tabmenu li.selected a { border: none; }
+          .tabmenu { margin-left: -13px; }
+
+      /* HEADER (BOTTOM-RIGHT) */
+      #header-bottom-right { bottom: -30px; background: transparent; }
+
+/* ██████╗ ██████╗ ███╗   ██╗████████╗███████╗███╗   ██╗████████╗
+  ██╔════╝██╔═══██╗████╗  ██║╚══██╔══╝██╔════╝████╗  ██║╚══██╔══╝
+  ██║     ██║   ██║██╔██╗ ██║   ██║   █████╗  ██╔██╗ ██║   ██║   
+  ██║     ██║   ██║██║╚██╗██║   ██║   ██╔══╝  ██║╚██╗██║   ██║   
+  ╚██████╗╚██████╔╝██║ ╚████║   ██║   ███████╗██║ ╚████║   ██║   
+   ╚═════╝ ╚═════╝ ╚═╝  ╚═══╝   ╚═╝   ╚══════╝╚═╝  ╚═══╝   ╚═╝   */
+
+  /* CONTENT */
+  .sitetable { margin-top: 37px; margin-left: 5px; }
+  .link { margin-right: 315px; background: #F9F9F9; padding: 10px; }
+  .link .title { padding-bottom: 5px; }
+  .content { margin-left: 0px; }
+
+      /* CONTENT > PREVIEW */
+      .sitetable .md {
+        background: white !important;
+        border: 0 !important;
+        border-radius: 4px !important; }
+
+/*███████╗██╗██████╗ ███████╗██████╗  █████╗ ██████╗ 
+  ██╔════╝██║██╔══██╗██╔════╝██╔══██╗██╔══██╗██╔══██╗
+  ███████╗██║██║  ██║█████╗  ██████╔╝███████║██████╔╝
+  ╚════██║██║██║  ██║██╔══╝  ██╔══██╗██╔══██║██╔══██╗
+  ███████║██║██████╔╝███████╗██████╔╝██║  ██║██║  ██║
+  ╚══════╝╚═╝╚═════╝ ╚══════╝╚═════╝ ╚═╝  ╚═╝╚═╝  ╚═╝*/
+
+  /* SIDEBAR */
+  .side { margin-top: 30px; }
+
+      /* SIDEBAR > SEARCH */
+      .side #search input[type=text] {
+         background: #F9F9F9;
+         border: 5px solid #F9F9F9;
+         border-radius: 4px; }
+      #search input[type=submit] { margin-left: -27px; }
+
+      /* SIDEBAR > SUBMIT / CREATE A NEW SUBREDDIT */
+      .morelink a { color: white; font-weight: normal; margin: 0; line-height: 35px;}
+      .morelink {
+        background: #A43931;
+        background-color: #A43931;
+        border: 0;
+        border-radius: 4px;
+        margin: 0;
+        height: 35px;
+        transition: background 0.3s ease; }
+      .morelink:hover { background: #1D4350; background-color: #1D4350; border: 0; }
+      .morelink .nub { display: none; }
+
+      /* SIDEBAR > TITLEBOX */
+      .leavemoderator { margin-top: 10px; padding-top: 10px; border-top: 1px solid #DDDDDD;}
+
+          /* SIDEBAR > TITLEBOX > SUBREDDIT NAME */
+          .titlebox h1 a { font-family: "Arial",sans-serif; }
+
+          /* SIDEBAR > TITLEBOX > JOIN / LEAVE */
+          .titlebox .fancy-toggle-button { position: absolute; right: 4px; margin-top: -28px;}
+          .titlebox .fancy-toggle-button a.option.add.active {
+            background-image: linear-gradient(#76b852, #8DC26F);
+            color: white; }
+          .titlebox .subscribe-button .active {
+            background: #ddd;
+            border-radius: 4px;
+            padding: 4px 20px;
+            border: 0;
+            color: gray;
+            outline: none;
+            font-family: "Arial",sans-serif;
+            font-size: 12px;
+            font-weight: normal;
+            border-radius: 4px; }
+
+          /* SIDEBAR > TITLEBOX > READERS / USERS HERE NOW */
+            .users-online { float: right; }
+            .users-online:before { display: none;}
+
+          /* SIDEBAR > TITLEBOX > DESCRIPTION */
+            .md-container-small .md, .side .md {
+            background: #F9F9F9;
+            border-radius: 4px;
+            padding: 10px 15px;
+            margin: 15px 0; }
+
+          /* SIDEBAR > TITLEBOX > SUBREDDIT CREATOR / SUBREDDIT AGE */
+            .titlebox .bottom { padding-top: 10px; border-top: 1px solid #DDDDDD; }
+
+      /* SIDEBAR > BOXES (MODERATION TOOLS, MODERATORS, RECENTLY VIEWED LINKS) */
+      .sidecontentbox .content {
+        background: #F9F9F9;
+        border: 1px solid #F9F9F9;
+        border-radius: 4px;
+        padding: 5px 10px; }
+      .icon-menu a { background: transparent; }
+
+/*███████╗ ██████╗  ██████╗ ████████╗███████╗██████╗ 
+  ██╔════╝██╔═══██╗██╔═══██╗╚══██╔══╝██╔════╝██╔══██╗
+  █████╗  ██║   ██║██║   ██║   ██║   █████╗  ██████╔╝
+  ██╔══╝  ██║   ██║██║   ██║   ██║   ██╔══╝  ██╔══██╗
+  ██║     ╚██████╔╝╚██████╔╝   ██║   ███████╗██║  ██║
+  ╚═╝      ╚═════╝  ╚═════╝    ╚═╝   ╚══════╝╚═╝  ╚═╝ */
+
+  /* FOOTER */
+  .footer { background: #F9F9F9; border: 0 ; border-radius: 4px;}
+
+/*██████╗  ██████╗ ███████╗████████╗    ██████╗  █████╗  ██████╗ ███████╗
+  ██╔══██╗██╔═══██╗██╔════╝╚══██╔══╝    ██╔══██╗██╔══██╗██╔════╝ ██╔════╝
+  ██████╔╝██║   ██║███████╗   ██║       ██████╔╝███████║██║  ███╗█████╗  
+  ██╔═══╝ ██║   ██║╚════██║   ██║       ██╔═══╝ ██╔══██║██║   ██║██╔══╝  
+  ██║     ╚██████╔╝███████║   ██║       ██║     ██║  ██║╚██████╔╝███████╗
+  ╚═╝      ╚═════╝ ╚══════╝   ╚═╝       ╚═╝     ╚═╝  ╚═╝ ╚═════╝ ╚══════╝*/
+
+     /* POST PAGE > COMMENT AREA */
+     .commentarea .sitetable {
+       background: #F9F9F9 !important;
+       margin-right: 315px !important;
+       padding-top: 10px !important;
+       border-radius: 4px !important; }
+     .commentarea .child .sitetable { margin-right: 0px !important; }
+     .new-comment .usertext-body { background: transparent; border: 0; }
+     .new-comment .usertext-body .md { background: #e5efff !important; }
+
+/*███████╗██╗   ██╗██████╗ ███╗   ███╗██╗████████╗    ██████╗  █████╗  ██████╗ ███████╗
+  ██╔════╝██║   ██║██╔══██╗████╗ ████║██║╚══██╔══╝    ██╔══██╗██╔══██╗██╔════╝ ██╔════╝
+  ███████╗██║   ██║██████╔╝██╔████╔██║██║   ██║       ██████╔╝███████║██║  ███╗█████╗  
+  ╚════██║██║   ██║██╔══██╗██║╚██╔╝██║██║   ██║       ██╔═══╝ ██╔══██║██║   ██║██╔══╝  
+  ███████║╚██████╔╝██████╔╝██║ ╚═╝ ██║██║   ██║       ██║     ██║  ██║╚██████╔╝███████╗
+  ╚══════╝ ╚═════╝ ╚═════╝ ╚═╝     ╚═╝╚═╝   ╚═╝       ╚═╝     ╚═╝  ╚═╝ ╚═════╝ ╚══════╝*/
+
+      /* SUBMIT PAGE > FORM */
+      .formtabs-content {
+        background: #F9F9F9;
+        border-radius: 4px;
+        border-top: 4px solid #F9F9F9;
+        margin-top: 10px; }
+      .roundfield { background: transparent; }
+
+          /* SUBMIT PAGE > FORM > LINK / TEXT */
+          ul.tabmenu.formtab { padding-left: 20px; }
+          .tabmenu.formtab .selected a {
+            border-radius: 4px;
+            padding: 5px 20px;
+            background: #1D4350; }
+          .tabmenu.formtab a { padding: 5px 10px; background: #F9F9F9; border: 0; border-radius: 4px; }
+
+          /* SUBMIT PAGE > FORM > INFOBAR */
+          .formtabs-content .infobar {
+            margin: 5px 10px;
+            border: none;
+            border-radius: 4px;
+            padding: 10px;
+            background: #A43931;
+            color: white; }
+
+/*██████╗ ███████╗███╗   ███╗ ██████╗ ██╗   ██╗███████╗██████╗ 
+  ██╔══██╗██╔════╝████╗ ████║██╔═══██╗██║   ██║██╔════╝██╔══██╗
+  ██████╔╝█████╗  ██╔████╔██║██║   ██║██║   ██║█████╗  ██║  ██║
+  ██╔══██╗██╔══╝  ██║╚██╔╝██║██║   ██║╚██╗ ██╔╝██╔══╝  ██║  ██║
+  ██║  ██║███████╗██║ ╚═╝ ██║╚██████╔╝ ╚████╔╝ ███████╗██████╔╝
+  ╚═╝  ╚═╝╚══════╝╚═╝     ╚═╝ ╚═════╝   ╚═══╝  ╚══════╝╚═════╝ */
+
+  /* Karma count, next to the username on the bottom-right part of the header */
+  .user { font-size: 0; }
+  .user a { font-size: 10px; }
+
+  /* Info about creating a subreddit under the "Create your own subreddit" button on the sidebar */
+  .sidebox.create .spacer { display: none; }
+
+/* ██████╗██╗   ██╗███████╗████████╗ ██████╗ ███╗   ███╗     ██████╗███████╗███████╗
+  ██╔════╝██║   ██║██╔════╝╚══██╔══╝██╔═══██╗████╗ ████║    ██╔════╝██╔════╝██╔════╝
+  ██║     ██║   ██║███████╗   ██║   ██║   ██║██╔████╔██║    ██║     ███████╗███████╗
+  ██║     ██║   ██║╚════██║   ██║   ██║   ██║██║╚██╔╝██║    ██║     ╚════██║╚════██║
+  ╚██████╗╚██████╔╝███████║   ██║   ╚██████╔╝██║ ╚═╝ ██║    ╚██████╗███████║███████║
+   ╚═════╝ ╚═════╝ ╚══════╝   ╚═╝    ╚═════╝ ╚═╝     ╚═╝     ╚═════╝╚══════╝╚══════╝*/
+
+  /* Hey */
+  .have { content:"a good day"; }

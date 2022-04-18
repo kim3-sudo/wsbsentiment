@@ -1,3 +1,4 @@
+[settings]
 REDDIT_CLIENT_API=thisisnotavalidclientapistring
 REDDIT_API_SECRET=thisisnotavalidapisecret
 REDDIT_USERNAME=usernamegoeshere

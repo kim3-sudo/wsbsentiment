@@ -27,14 +27,17 @@ while True:
         title = response.json()[0]['data']['children'][0]['data']['title']
         title = title.replace('",', '')
         title = re.sub(r"[^\d\w\s$'\.]", '', title)
-        
-
+        text = response.json()[0]['data']['children'][0]['data']['selftext']
+        text = re.sub(r"https?:\/\/(www\.)?[-a-zA-Z0-9@:%._\+~#=]{1,256}\.[a-zA-Z0-9()]{1,6}\b([-a-zA-Z0-9()@:%_\+.~#?&//=]*)", '', text)
+        text = text.replace('",', '')
+        text = text.replace('\n', ' ')
+        text = re.sub(r"[^\d\w\s$'\.]", '', text)
         flair = response.json()[0]['data']['children'][0]['data']['link_flair_richtext'][0]['t']
-        flair = re.sub(r"[^\d\w\s]", '', flair).lower()[:4]
+        flair = re.sub(r"[^\w]", '', flair).lower()[:4]
         if title in seen:
                 print("Post already seen. Passing...")
                 time.sleep(1.2)
-        if flair in ['meme']:
+        if flair == 'meme':
                 print("Meme. Passing...")
                 if title not in seen:
                         seen.append(title)
@@ -42,7 +45,7 @@ while True:
                         file.write('\n' + title)
                         file.close()
                 time.sleep(1.2)
-        if flair in ['gain']:
+        if flair == 'gain':
                 print('Autoranking based on flair')
                 file = open("./wsbsentiment.csv", 'a')
                 file.write('"' + title + '","' + text + '","positive"\n')
@@ -52,7 +55,7 @@ while True:
                 file.write('\n' + title)
                 file.close()
                 time.sleep(1.2)
-        if flair in ['loss']:
+        if flair == 'loss':
                 print('Autoranking based on flair')
                 file = open("./wsbsentiment.csv", 'a')
                 file.write('"' + title + '","' + text + '","negative"\n')
@@ -64,11 +67,6 @@ while True:
                 time.sleep(1.2)
         else:
                 print('Title: ' + title)
-                text = response.json()[0]['data']['children'][0]['data']['selftext']
-                text = re.sub(r"https?:\/\/(www\.)?[-a-zA-Z0-9@:%._\+~#=]{1,256}\.[a-zA-Z0-9()]{1,6}\b([-a-zA-Z0-9()@:%_\+.~#?&//=]*)", '', text)
-                text = text.replace('",', '')
-                text = text.replace('\n', ' ')
-                text = re.sub(r"[^\d\w\s$'\.]", '', text)
                 print('Text: ' + text)
                 print('Flair: ' + flair)
                 rank = str(input('Rank the post:\n1-3 or `n`\tNegative\n4-6 or `k`\tNeutral\n7-9 or `p`\tPositive\n0 or space\tSkip\nx\t\tExit\n>>> '))
