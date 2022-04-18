@@ -8,3 +8,6 @@ token
 
 # hdf5 weights (these will differ between users)
 *.hdf5
+
+# Compile Python
+*.pyc
