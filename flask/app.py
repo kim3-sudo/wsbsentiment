@@ -15,8 +15,6 @@ def action():
     action = str(flask.request.args.get('action'))
     if action == 'tendies':
         return flask.jsonify({"result": 'this free tendies module isn\'t ready yet.'})
-    elif action == 'advice':
-        return flask.jsonify({"result": 'this free advice module isn\'t ready yet.'})
     elif action == 'decode':
         outstr = """
         <div class="wsblingowrapper">
@@ -35,9 +33,9 @@ def wsblingo():
     encoded = str(flask.request.args.get('wsblingotext'))
     sentiment = wsb.wsblingo(data = encoded)        
     if sentiment == "positive":
-        return flask.jsonify({"wsblingoresult": "r/wallstreetbets probably thinks this will send you to the moon - positive."})
+        return flask.jsonify({"wsblingoresult": "got: " + encoded + "<br>r/wallstreetbets probably thinks this will send you to the moon - positive."})
     elif sentiment == "negative":
-        return flask.jsonify({"wsblingoresult": "r/wallstreetbets probably doesn't think this gives you free tendies - negative."})
+        return flask.jsonify({"wsblingoresult": "got: " + encoded + "<br>r/wallstreetbets probably doesn't think this gives you free tendies - negative."})
     else:
         return flask.jsonify({"wsblingoresult": sentiment})
 
