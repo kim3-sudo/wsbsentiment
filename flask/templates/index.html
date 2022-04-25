@@ -8,6 +8,7 @@
     <body>
         <header>
             <h1>tendiebot</h1>
+            <h2 style="color: red;">nsfw</h2>
         </header>
         <div class="content">
             <div class="wrapper">
@@ -23,13 +24,21 @@
             <p><b>what is r/wallstreetbets?</b></p>
             <p>r/wallstreetbets is a subreddit for wannabe day traders who try to get rich on meme stocks like lucid motors (NASDAQ:LCID), tesla (NASDAQ:TSLA), bed bath and beyond (NASDAQ:BBBY), blackberry (NYSE:BB), nokia (NYSE:NOK), palantir (NYSE:PLTR), and virgin galactic (NYSE:SPCE). their investments are not based on logic. their investments are based on memes and the promise of free tendies.</p>
             <p><b>what is tendiebot?</b></p>
-            <p>tendiebot is a no-code interface to use a <span class="rainbow-text">neural network</span> and some <span class="rainbow-text">machine learning</span> and <span class="rainbow-text">artificial intelligence</span> to break down what the hell r/wallstreetbets is talking about.</p>
+            <p>tendiebot is a no-code interface that uses some <span class="rainbow-text">machine learning</span> and <span class="rainbow-text">artificial intelligence</span> to leverage the power of a <span class="rainbow-text">neural network</span> to break down what the hell r/wallstreetbets is talking about.</p>
             <p><b>what makes tendiebot different from other natural language tools?</b></p>
             <p>r/wallstreetbets uses a unique vocabulary that is not encapsulated in any other dataset or online community. there's not much data on r/wallstreetbets compared to tweets, news stories, books, or other datasets. tendiebot has been specially trained to work with r/wallstreetbets and only r/wallstreetbets.</p>
             <p><b>how does tendiebot work?</b></p>
             <p>tendiebot uses <span class="rainbow-text">machine learning</span> to analyze r/wallstreetbets. to get free tendies, tendiebot uses a <span class="rainbow-text">transformer neural network</span> to generate a post that looks like something that might be written on r/wallstreetbets. it then uses a <span class="rainbow-text">naive bayesian classifier</span> to analyze the post for how positive or negative it is. if it's positive, then tendiebot will give you the stock advice. if it's negative, then tendiebot will try to make another post using the <span class="rainbow-text">neural network</span> until it gets a positive post. if you don't know what r/wallstreetbets just said, tendiebot can use the <span class="rainbow-text">naive bayesian classifier</span> to get the sentiment of the post. just give tendiebot the post text and tendiebot will tell you whether it likes it or not.</p>
+            <p><b>do dolphins sleep?</b></p>
+            <p>yes, dolphins are mammals and they do sleep.</p>
+            <p><b>what if i actually want to invest and trade stonks n shit like that?</b></p>
+            <p>well, for one, you shouldn't be listening to r/wallstreetbets.</p>
+            <p><b>uhm, tendiebot was wrong about something.</b></p>
+            <p>uhm, that's not a question, and also sorry not sorry. i don't care. that should teach you for trusting a bot that was trained on a subreddit with traders who don't know what they're doing.</p>
+            <p><b>well, i actually want to make tendiebot better...</b></p>
+            <p>go to the <a href="https://github.com/kim3-sudo/wsbsentiment">github repository</a> and add to the dataset. the more data tendiebot has, the better it'll do with classification</p>
             <hr>
-            <p>This is not financial advice. The information, materials, services, and other content available on or through this website are for entertainment purposes only, and you should not construe any such information or other information as legal, tax, investment, financial, or other advice. Nothing contained on this website constitutes a solicitation, recommendataion, endorsement, or offer by the website owners or any third party service provider to buy or sell any securities or other financial instruments in this or in any other jurisdiction in which such solicitation or offer would be unlawful under the securities laws of such jurisdiction.</p>
+            <p><span style="text-transform: uppercase;">This is not financial advice.</span> The information, materials, services, and other content available on or through this website are for entertainment purposes only, and you should not construe any such information or other information as legal, tax, investment, financial, or other advice. Nothing contained on this website constitutes a solicitation, recommendataion, endorsement, or offer by the website owners or any third party service provider to buy or sell any securities or other financial instruments in this or in any other jurisdiction in which such solicitation or offer would be unlawful under the securities laws of such jurisdiction.</p>
         </div>
         <div class="footer">
             <p>&copy; 2022 tendiebot</p>
@@ -38,6 +47,7 @@
             $(document).ready(function(){
                 $('.wrapper').on('click', '.submit', function() {
                     var iwant = $('#iwant').val();
+                    $(".result").html('<p>' + 'loading...' + '</p>');
                     $.ajax({
                         url: "/action",
                         type: "get",
@@ -53,7 +63,8 @@
             });
             function wsblingo() {
                 var wsblingo = String($('#wsblingo').val());
-                console.log(wsblingo)
+                console.log(wsblingo);
+                $(".wsblingoresult").html('<p>' + 'loading...' + '</p>');
                 $.ajax({
                     url: "/wsblingo",
                     type: "get",
