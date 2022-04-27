@@ -178,3 +178,5 @@ cython_debug/
 
 # TensorFlow Runtime Objects
 test_trainer/
+trained_model/
+aitextgen/
