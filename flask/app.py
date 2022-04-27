@@ -2,7 +2,9 @@ import flask
 from flask import Flask, render_template, request, redirect
 
 from wsbsentiment import *
-from wsbsentiment.wsbsentiment import wsbsentiment as wsb
+from wsbsentiment.wsbsentiment import wsbsentiment as wsbsen
+from wsbgenerate import *
+from wsbgenerate.wsbgenerate import wsbgenerate as wsbgen
 
 app = Flask(__name__)
 
@@ -14,7 +16,7 @@ def index():
 def action():
     action = str(flask.request.args.get('action'))
     if action == 'tendies':
-        return flask.jsonify({"result": 'this free tendies module isn\'t ready yet.'})
+        return flask.jsonify({"result": wsbgenerate()})
     elif action == 'decode':
         outstr = """
         <div class="wsblingowrapper">
@@ -31,13 +33,18 @@ def action():
 @app.route('/wsblingo')
 def wsblingo():
     encoded = str(flask.request.args.get('wsblingotext'))
-    sentiment = wsb.wsblingo(data = encoded)        
+    sentiment = wsbsen.wsblingo(data = encoded)        
     if sentiment == "positive":
         return flask.jsonify({"wsblingoresult": "got: " + encoded + "<br>r/wallstreetbets probably thinks this will send you to the moon - positive."})
     elif sentiment == "negative":
         return flask.jsonify({"wsblingoresult": "got: " + encoded + "<br>r/wallstreetbets probably doesn't think this gives you free tendies - negative."})
     else:
         return flask.jsonify({"wsblingoresult": sentiment})
+
+@app.route('/wsbgenerate')
+def wsbgenerate():
+    generated = wsbgen.textgen()
+    return generated + "..."
 
 if __name__ == '__main__':
     app.run()

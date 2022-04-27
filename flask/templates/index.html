@@ -77,6 +77,19 @@
                     }
                 });
             }
+            function wsbgenerate() {
+                $(".result").html('<p>' + 'loading...this might take a sec...' + '</p>');
+                $.ajax({
+                    url: "/wsbgenerate",
+                    type: "get",
+                    success: function(response) {
+                        $(".result").html('<p>' + response.result.toString() + '</p>');
+                    },
+                    error: function(response) {
+                        $(".result").html('<p>' + 'something went wrong.' + '</p>')
+                    }
+                });
+            }
         </script>
     </body>
 </html>
