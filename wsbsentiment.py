@@ -37,15 +37,14 @@ while True:
         if title in seen:
                 print("Post already seen. Passing...")
                 time.sleep(1.2)
-        if flair == 'meme':
-                print("Meme. Passing...")
-                if title not in seen:
-                        seen.append(title)
-                        file = open("./seen", 'a')
-                        file.write('\n' + title)
-                        file.close()
+        elif flair == 'meme':
+                print('Autoranking based on flair')
+                seen.append(title)
+                file = open("./seen", 'a')
+                file.write('\n' + title)
+                file.close()
                 time.sleep(1.2)
-        if flair == 'gain':
+        elif flair == 'gain':
                 print('Autoranking based on flair')
                 file = open("./wsbsentiment.csv", 'a')
                 file.write('"' + title + '","' + text + '","positive"\n')
@@ -55,7 +54,7 @@ while True:
                 file.write('\n' + title)
                 file.close()
                 time.sleep(1.2)
-        if flair == 'loss':
+        elif flair == 'loss':
                 print('Autoranking based on flair')
                 file = open("./wsbsentiment.csv", 'a')
                 file.write('"' + title + '","' + text + '","negative"\n')
