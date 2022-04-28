@@ -1,10 +1,8 @@
-import pandas as pd
-import gpt_2_simple as gpt2
-import tensorflow as tf
+from aitextgen import aitextgen
 
 class wsbgenerate:
   def textgen():
-    tf.compat.v1.reset_default_graph()
-    sess = gpt2.start_tf_sess()
-    gpt2.load_gpt2(sess)
-    return gpt2.generate(sess, temperature = 0.7, nsamples = 1, batch_size = 1, length = 50, return_as_list = True)[0]
+    ai = aitextgen(model_folder="trained_model",
+               tokenizer_file="aitextgen.tokenizer.json",
+               to_gpu=True)
+    return ai.generate_one(temperature = 0.5, top_p = 0.9)
