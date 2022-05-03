@@ -4,7 +4,13 @@
 
 Using a nascent dataset collected using the Reddit API, we got a couple hundred posts from [r/wallstreetbets](https://reddit.com/r/wallstreetbets). This particular subreddit proves difficult for existing sentiment analysis models because of the rather unique language used in the subreddit.
 
-The dataset is designed to constantly expand. The easiest way for you to contribute is by either *fixing* `wsbsentiment.csv` or by *running* `wsbsentiment.py` on your own machine (given a Reddit API key) - use the [quick start guide](https://github.com/reddit-archive/reddit/wiki/OAuth2-Quick-Start-Example) for the API! When you push your changes up, make sure you push up `wsbsentiment.csv`, which is the dataset that the sentiment analysis model is trained on. You shouldn't be able to go fast enough to time out the Reddit API.
+The dataset is designed to constantly expand. The easiest way for you to contribute is by either *fixing* `wsbsentiment.csv` or by *running* `wsbsentiment.py` on your own machine. To get your Reddit API key:
+
+1. Make a copy of `settings.ini.example` and name it `settings.ini`.
+2. In your copy, add your username, password, and an API key and secret. Use the [quick start guide](https://github.com/reddit-archive/reddit/wiki/OAuth2-Quick-Start-Example) for the API!
+3. Set your working directory to `wsbsentiment`, then run `generatetoken.py`. This will query the Reddit API and get a token, which will be valid for a couple of hours. It'll save this token to a file called `token`, which `wsbsentiment.py` will look for.
+
+When you push your changes up, make sure you push up `wsbsentiment.csv`, which is the dataset that the sentiment analysis model is trained on. You shouldn't be able to go fast enough to time out the Reddit API. If you don't force anything, you shouldn't be able to commit or push your token or anything inside of `settings.ini.example`, but always double-check that you're not committing or updating any files that you didn't expect!
 
 Predicably with any Internet forum, the text in the dataset may contain lewd and/or offensive words. Reader discretion is advised.
 
@@ -14,9 +20,11 @@ The simplest way to use this is to use the no-code interface, named *tendiebot*.
 
 ```
 git clone https://github.com/kim3-sudo/wsbsentiment
-cd wsbsentiment/flask
-python3 app.py
+cd wsbsentiment
+python3 ./flask/app.py
 ```
+
+Make sure you set your working directory to `wsbsentiment`, not `flask` or your home directory.
 
 If you *want* to do things the hard way, you could also use the Jupyter Notebooks provided. `sentiment_analysis.ipynb` leverages a naive Bayesian classifier to do sentiment analysis. If you add to `wsbsentiment.csv` and want to use the new phrases, delete `words.pkl`. It will be regenerated when you run `sentiment_analysis.ipynb`. The `words.pkl` file stores tokenized words that otherwise take a *very* long time to tokenize. After `words.pkl` is created, the rest of the notebook should run pretty quickly.
 
